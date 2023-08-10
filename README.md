@@ -47,10 +47,10 @@ Será necesario confirmar la creación de los recursos escribiendo "yes" cuando 
 ## Acceso remoto a la máquina virtual
 Para acceder a la máquina virtual de forma remota, sigue estos pasos:
 
-· Abre el cliente de RDP en tu máquina local.
-· Ingresa la dirección IP pública de la máquina virtual como destino.
-· Usa las credenciales de acceso configuradas en la instancia de Windows para iniciar sesión.
-· ¡Listo! Ahora puedes acceder a tu máquina virtual de Windows desde tu máquina local de forma remota.
+- Abre el cliente de RDP en tu máquina local.
+- Ingresa la dirección IP pública de la máquina virtual como destino.
+- Usa las credenciales de acceso configuradas en la instancia de Windows para iniciar sesión.
+- ¡Listo! Ahora puedes acceder a tu máquina virtual de Windows desde tu máquina local de forma remota.
 
 ## Limpieza de recursos
 - Una vez que hayas terminado de utilizar la máquina virtual, asegúrate de eliminar los recursos creados para evitar costos innecesarios. Para hacerlo, ejecuta el siguiente comando:
