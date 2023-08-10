@@ -170,7 +170,7 @@ Terraform will perform the following actions:
         }
     }
 
-  # aws_security_group.serverwindows-sg must be replaced
+  aws_security_group.serverwindows-sg must be replaced
 -/+ resource "aws_security_group" "serverwindows-sg" {
       ~ arn                    = "arn:aws:ec2:us-east-1:233505878664:security-group/sg-0112071aab9a3ebc1" -> (known after apply)
       ~ description            = "acceso remoto para administracion del equipo" -> "Acceso remoto" # forces replacement
