@@ -53,7 +53,7 @@ Para acceder a la máquina virtual de forma remota, sigue estos pasos:
 
 - ¡Listo! Ahora puedes acceder a tu máquina virtual de Windows desde tu máquina local de forma remota.
 
-##Output del terraform plan
+## Output del terraform plan
 
  terraform plan --out plan.out
 aws_eip.windowsserver-eip: Refreshing state... [id=eipalloc-0c10e67b89f090b37]
@@ -67,7 +67,7 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # aws_eip_association.serverwindows-eip must be replaced
+  aws_eip_association.serverwindows-eip must be replaced
 -/+ resource "aws_eip_association" "serverwindows-eip" {
       ~ id                   = "eipassoc-099762a084e8d976b" -> (known after apply)
       ~ instance_id          = "i-0b2d584b7d495fd05" # forces replacement -> (known after apply) # forces replacement
@@ -77,7 +77,7 @@ Terraform will perform the following actions:
         # (1 unchanged attribute hidden)
     }
 
-  # aws_instance.serverwindows must be replaced
+  aws_instance.serverwindows must be replaced
 -/+ resource "aws_instance" "serverwindows" {
       ~ arn                                  = "arn:aws:ec2:us-east-1:233505878664:instance/i-0b2d584b7d495fd05" -> (known after apply)
       ~ associate_public_ip_address          = true -> false # forces replacement
