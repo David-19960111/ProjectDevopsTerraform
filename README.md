@@ -12,34 +12,32 @@ Antes de comenzar, asegúrate de tener lo siguiente:
 Para separar los datos sensibles, crea un archivo en el mismo directorio llamado terraform.tfvars. Y decláralos así:
 
 # Application Definition 
-app_name        = "Windowsapp" # Do NOT enter any spaces
-app_environment = "dev"       # Dev, Test, Staging, Prod, etc
+- app_name        = "serverwindows" # Do NOT enter any spaces
 
 # AWS Settings
-aws_access_key = "aws_access_key"
-aws_secret_key = "aws_secret_key"
+- aws_access_key = "aws_access_key"
+- aws_secret_key = "aws_secret_key"
 
 # Windows Virtual Machine
-windows_instance_name               = "winsrv01"
-windows_instance_type               = "t2.micro"
-windows_root_volume_size            = 30
-windows_root_volume_type            = "gp2"
+- windows_instance_name               = "winsrv01"
+- windows_instance_type               = "t2.micro"
+- windows_root_volume_size            = 30
+- windows_root_volume_type            = "gp2"
 
 ## Pasos de ejecución
 Clona este repositorio:
-- git clone https://github.com/dsantafe/Bootcamp-Devops-Engineer
-cd Bootcamp-Devops-Engineer/labs/lab-02-terraform-aws-windows-ec2-instance
-- Abre el archivo windows-vm-variables.tf y realiza las siguientes modificaciones:
-Cambia el valor de region para seleccionar la región de AWS donde deseas crear la máquina virtual. Si es necesario, cambia el valor de ami para seleccionar la AMI de Windows que prefieras. Verifica la configuración de key_name para asegurarte de que corresponde al nombre de tu llave SSH en AWS.
+- git clone https://github.com/David-19960111/ProjectDevopsTerraform
+- Abre el archivo variables.tf y realiza las siguientes modificaciones:
+- Cambia el valor de region para seleccionar la región de AWS donde deseas crear la máquina virtual. Si es necesario, cambia el valor de ami para seleccionar la AMI de Windows que prefieras. Verifica la configuración de key_name para asegurarte de que corresponde al nombre de tu llave SSH en AWS.
 
 1. Ejecuta el siguiente comando para inicializar el directorio de trabajo de Terraform:
-terraform init
+- terraform init
 
 2. Antes de crear los recursos, verifica qué recursos se crearán con el siguiente comando:
-terraform plan
+- terraform plan
 
 3. Si la salida del comando terraform plan es correcta, procede a crear la máquina virtual con el siguiente comando:
-terraform apply
+- terraform apply
 
 Será necesario confirmar la creación de los recursos escribiendo "yes" cuando se te solicite.
 
@@ -57,6 +55,6 @@ Para acceder a la máquina virtual de forma remota, sigue estos pasos:
 ## Limpieza de recursos
 - Una vez que hayas terminado de utilizar la máquina virtual, asegúrate de eliminar los recursos creados para evitar costos innecesarios. Para hacerlo, ejecuta el siguiente comando:
 
-terraform destroy
+- terraform destroy
 
 Recuerda confirmar la eliminación de los recursos escribiendo "yes" cuando se te solicite.

@@ -23,7 +23,7 @@ resource "aws_eip_association" "serverwindows-eip" {
 }
 resource "aws_security_group" "serverwindows-sg" {
     name = "serverwindows-rdp-sg"
-    description = "acceso remoto para administracion del equipo"
+    description = "Acceso remoto"
     vpc_id = "vpc-085cbbd5a65dbe4d2"
     ingress {
         from_port = 3389
@@ -41,11 +41,18 @@ egress {
 }
 resource "aws_instance" "serverwindows" {
     ami = "ami-0fc682b2a42e57ca2"
-    instance_type = "t2.micro"
+    instance_type = var.windows_instance_type
     key_name = "windowsserver1"
     associate_public_ip_address = false
     vpc_security_group_ids = [aws_security_group.serverwindows-sg.id]
     subnet_id = "subnet-091d67d3f758993fe"
+
+    root_block_device {
+		volume_size           = var.windows_root_volume_size
+		volume_type           = var.windows_root_volume_type
+		delete_on_termination = true
+		encrypted             = true
+	}
 
     tags = {
         Name="serverwindows"
