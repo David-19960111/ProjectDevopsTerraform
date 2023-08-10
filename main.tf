@@ -59,3 +59,4 @@ resource "aws_instance" "serverwindows" {
         OWNER="david11011996@gmail.com"
     }
 }
+
